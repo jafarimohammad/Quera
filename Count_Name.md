@@ -1,9 +1,12 @@
+# count name in input file
+
+```
 #!/bin/bash
 
 filename="$1"    # input filename
 c=$( cat $filename | grep -v '^$' | sed  's/,/\n/' | sed  's/!/\n/' | sed  's/|/\n/' | sed  's/    /\n/' | sed  's/ /\n/' | sed  's/\\/\n/' | sed -r '/^\s*$/d' | wc -l )
 echo Count: $c
-
+```
 # NOTE:
 # * Your script MUST read the input from a given file as follows:
 #   $ ./count_names.sh input.txt
@@ -14,10 +17,12 @@ echo Count: $c
 
 #/////////////////////////////////////////////////////////////////////////////////////////////////
 
-## names_input.txt:
-# ali    behnam salar,javad|ehsan\mohammad!hossein
+# names_input.txt:
+```
+ali    behnam salar,javad|ehsan\mohammad!hossein
 
-# hadi
+hadi
 
-# ali
-# mohammadreza
+ali
+mohammadreza
+```
