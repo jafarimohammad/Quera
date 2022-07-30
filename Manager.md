@@ -8,7 +8,7 @@ if [ $program == "bonus" ]
 then
         if [ $(cat $file | awk 'NR==1' | awk -F',' {'print $1'}) == "$id" ]
         then
-				bonus="$"
+		bonus="$"
                 reward="0.05"
                 salary=$(cat $file | awk 'NR==1' | awk -F',' {'print $5'})
                 bonus+=$(echo $salary $reward | awk '{printf "%4.0f\n",$1*$2}')
@@ -18,7 +18,7 @@ then
 
         elif [ $(cat $file | awk 'NR==2' | awk -F',' {'print $1'}) == "$id" ]
         then
-				bonus="$"
+		bonus="$"
                 reward="0.05"
                 salary=$(cat $file | awk 'NR==2' | awk -F',' {'print $5'})
                 bonus+=$(echo $salary $reward | awk '{printf "%4.0f\n",$1*$2}')
@@ -26,7 +26,7 @@ then
 
         elif [ $(cat $file | awk 'NR==3' | awk -F',' {'print $1'}) == "$id" ]
         then
-				bonus="$"
+		bonus="$"
                 reward="0.05"
                 salary=$(cat $file | awk 'NR==3' | awk -F',' {'print $5'})
                 bonus+=$(echo $salary $reward | awk '{printf "%4.0f\n",$1*$2}')
@@ -34,10 +34,10 @@ then
 
         elif [ $(cat $file | awk 'NR==4' | awk -F',' {'print $1'}) == "$id" ]
         then
-				bonus="$"
+		bonus="$"
                 reward="0.05"
                 salary=$(cat $file | awk 'NR==4' | awk -F',' {'print $5'})
-                bonus=$(echo $salary $reward | awk '{printf "%4.0f\n",$1*$2}')
+                bonus+=$(echo $salary $reward | awk '{printf "%4.0f\n",$1*$2}')
                 echo $(cat $file | awk 'NR==4' | awk -F',' {'print $3'}) will get $bonus bonus
 
         fi
