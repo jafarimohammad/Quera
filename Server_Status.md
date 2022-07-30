@@ -1,4 +1,4 @@
-# server status: in inputfile:
+# server status in inputfile:
 ```
 #!/bin/bash
 
