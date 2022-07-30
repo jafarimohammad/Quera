@@ -8,14 +8,12 @@ c=$( cat $filename | grep -v '^$' | sed  's/,/\n/' | sed  's/!/\n/' | sed  's/|/
 echo Count: $c
 ```
 # NOTE:
-# * Your script MUST read the input from a given file as follows:
-#   $ ./count_names.sh input.txt
-# * Your script MUST print the result to the stdout.
-# * Your script MUST conform to the output format provided in the question.
-#
-# ATTENTION: DON'T change this file name!
+1. * Your script MUST read the input from a given file as follows:
+2.   $ ./count_names.sh input.txt
+3. * Your script MUST print the result to the stdout.
+4. * Your script MUST conform to the output format provided in the question.
+5. ATTENTION: DON'T change this file name!
 
-#/////////////////////////////////////////////////////////////////////////////////////////////////
 
 # names_input.txt:
 ```
