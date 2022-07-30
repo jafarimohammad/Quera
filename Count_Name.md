@@ -4,8 +4,8 @@
 #!/bin/bash
 
 filename="$1"    # input filename
-c=$( cat $filename | grep -v '^$' | sed  's/,/\n/' | sed  's/!/\n/' | sed  's/|/\n/' | sed  's/    /\n/' | sed  's/ /\n/' | sed  's/\\/\n/' | sed -r '/^\s*$/d' | wc -l )
-echo Count: $c
+count=$( cat $filename | grep -v '^$' | sed  's/,/\n/' | sed  's/!/\n/' | sed  's/|/\n/' | sed  's/    /\n/' | sed  's/ /\n/' | sed  's/\\/\n/' | sed -r '/^\s*$/d' | wc -l )
+echo Count: $count
 ```
 # NOTE:
 1. Your script MUST read the input from a given file as follows:
