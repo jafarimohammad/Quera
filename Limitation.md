@@ -1,4 +1,4 @@
-# Mem And Cpu limite:
+# Resource limitations:
 ```
 version: "2"
 services:
