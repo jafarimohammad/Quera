@@ -18,7 +18,7 @@ hadi
 ali  
 mohammadreza
 ```
-
+# count.sh :
 ```
 #!/bin/bash
 
