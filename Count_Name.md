@@ -1,4 +1,14 @@
-# count name in input file
+# شمارش اسامی
+اسکریپتی بنویسید که بتواند تعداد اسامی افراد را از متن زیر استخراج کند. دقت کنید اسم‌ها با یک سری جداکننده از هم جدا شده‌اند که جداکننده‌ها به شرح زیر هستند:
+
+Tab
+Space (Blank)
+Comma ,
+Bar |
+Exclamation Mark !
+Dollar Sign $
+New Line
+Backslash \
 
 ```
 #!/bin/bash
