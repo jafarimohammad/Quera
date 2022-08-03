@@ -14,31 +14,31 @@ D 99 88 69
 #!/bin/bash
 
 filename="$1"
-A="PASS"
-B="PASS"
-C="PASS"
-D="PASS"
+A="Pass"
+B="Pass"
+C="Pass"
+D="Pass"
 
 if [[ $(cat $filename | awk 'NR==1' | awk {'print $2'}) -le 50 ]]  || [[ $(cat $filename | awk 'NR==1' | awk {'print $3'}) -le 50 ]] ||[[ $(cat $filename | awk 'NR==1' | awk {'print $4'}) -le 50 ]]
 then
-        A="FAIL"
+        A="Fail"
 
 fi
 
 if [[ $(cat $filename | awk 'NR==2' | awk {'print $2'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==2' | awk {'print $3'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==2' | awk {'print $4'}) -le 50 ]]
 then
-        B="FAIL"
+        B="Fail"
 
 fi
 
 if [[ $(cat $filename | awk 'NR==3' | awk {'print $2'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==3' | awk {'print $3'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==3' | awk {'print $4'}) -le 50 ]]
 then
-        c="FAIL"
+        c="Fail"
 fi
 
 if [[ $(cat $filename | awk 'NR==4' | awk {'print $2'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==4' | awk {'print $3'}) -le 50 ]] || [[ $(cat $filename | awk 'NR==4' | awk {'print $4'}) -le 50 ]]
 then
-        D="FAIL"
+        D="Fail"
 fi
 
 echo A: $A
