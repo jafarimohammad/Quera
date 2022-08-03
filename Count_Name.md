@@ -9,6 +9,15 @@
 * Dollar Sign $
 * New Line
 * Backslash \
+# نمونه ورودی
+```
+ali    behnam salar,javad|ehsan\mohammad!hossein
+
+hadi 
+
+ali  
+mohammadreza
+```
 
 ```
 #!/bin/bash
@@ -18,15 +27,6 @@ count=$( cat $filename | grep -v '^$' | sed  's/,/\n/' | sed  's/!/\n/' | sed  '
 echo Count: $count
 ```
 
-# names_input.txt:
-```
-ali    behnam salar,javad|ehsan\mohammad!hossein
-
-hadi
-
-ali
-mohammadreza
-```
 # NOTE:
 1. Your script MUST read the input from a given file as follows:
 2. $ ./count_names.sh input.txt
